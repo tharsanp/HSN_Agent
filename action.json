@@ -1,0 +1,26 @@
+{
+  "actions": [
+    {
+      "description": "Default Welcome Intent",
+      "name": "MAIN",
+      "fulfillment": {
+        "conversationName": "hsn_agent_conversation"
+      },
+      "intent": {
+        "name": "actions.intent.MAIN",
+        "trigger": {
+          "queryPatterns": [
+            "talk to HSN agent"
+          ]
+        }
+      }
+    }
+  ],
+  "conversations": {
+    "hsn_agent_conversation": {
+      "name": "hsn_agent_conversation",
+      "url": "https://d326-103-183-240-250.ngrok-free.app"
+    }
+  },
+  "locale": "en"
+}

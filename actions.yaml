@@ -1,0 +1,23 @@
+version: '3'
+actions:
+  - name: MAIN
+    intent: actions.intent.MAIN
+    fulfillment:
+      webhookHandler: entryPoint
+
+  - name: ValidateHSNCode
+    intent: ValidateHSNCode
+    fulfillment:
+      webhookHandler: entryPoint
+
+intents:
+  - name: ValidateHSNCode
+    parameters:
+      - name: hsn
+        type: @sys.number
+        required: true
+        prompt: "Which HSN code would you like to validate?"
+
+types: []
+
+locale: en
